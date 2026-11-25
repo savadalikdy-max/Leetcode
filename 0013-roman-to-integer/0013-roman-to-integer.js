@@ -3,7 +3,7 @@
  * @return {number}
  */
 var romanToInt = function(s) {
-    let a = {
+       const roman = {
         I: 1,
         V: 5,
         X: 10,
@@ -16,10 +16,12 @@ var romanToInt = function(s) {
     let total = 0;
 
     for (let i = 0; i < s.length; i++) {
-        if (a[s[i]] < a[s[i + 1]]) {
-            total -= a[s[i]];
-        } else {
-            total += a[s[i]];
+
+        if (roman[s[i]] < roman[s[i + 1]]) {
+            total -= roman[s[i]];
+        } 
+        else {
+            total += roman[s[i]];
         }
     }
 
